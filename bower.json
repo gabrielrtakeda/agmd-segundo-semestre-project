@@ -1,0 +1,22 @@
+{
+  "name": "agmd-segundo-semestre-project",
+  "version": "0.0.0",
+  "authors": [
+    "Gabriel Ramos Takeda <gabrieel.rt@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "teamdf/jquery-number": "jquery-number#~2.1.6"
+  }
+}

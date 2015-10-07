@@ -1,0 +1,100 @@
+section.product-selection {}
+section.product-selection .main-columns {
+    border-right: 1px solid #ededed;
+}
+
+section.product-selection h2 {
+    border-bottom: 1px dotted #ddd;
+}
+
+section.product-selection .main-columns:last-child {
+    border-right: none;
+}
+
+article.main.container,
+section.product-selection .row .selected,
+section.product-selection .row .confirmation {
+    display: none;
+}
+
+.box-product {
+    margin-bottom: 15px;
+}
+
+.box-product .image-group {
+    position: relative;
+}
+
+.box-product label:hover,
+.box-product img:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.box-product .selected-removal {
+    position: absolute;
+    left: 7px;
+    top: 3px;
+}
+
+.box-product label:hover {
+    text-decoration: underline;
+}
+
+.box-product:nth-child(even) {
+    border-left: 1px dotted #ddd;
+    padding-left: 14px;
+}
+
+.box-product label {
+    text-transform: capitalize;
+}
+
+.box-product img {
+    margin-bottom: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.box-product .form-group.price {
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+.box-product .form-group.price .input-group-addon {
+    padding-right: 22px;
+}
+
+.box-product .form-group.price div.form-control {
+    float: none;
+}
+
+.box-product .form-group,
+.box-product .input-group {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .box-product.col-md-6 {
+        width: 49.8%;
+    }
+}
+@media (min-width: 768px) {
+    .col-sm-6 {
+        padding-left: 16px;
+    }
+
+    .col-sm-6 .form-inline .input-group .input-group-addon {
+        width: 53px;
+    }
+}
+
+
+section.product-selection .table-responsive .table {
+    font-size: .8em;
+}
+
+section.product-selection .table-responsive .table tfoot {
+    font-weight: bold;
+}
