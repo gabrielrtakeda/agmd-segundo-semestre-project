@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-sm-6 box-product" data-product="{{product}}">
+            <label>{{product}}</label>
+            <img src="/images/products/{{product}}.{{extension}}" width="100%">
+            <div class="form-inline">
+                <div class="form-group price">
+                    <div class="input-group">
+                        <div class="input-group-addon">R$</div>
+                        <div class="form-control">{{price}}</div>
+                    </div>
+                </div>
+                <div class="form-group quantity">
+                    <div class="input-group">
+                        <div class="input-group-addon">Qtd.</div>
+                        <div class="form-control">{{quantity}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 box-description">
+            <h3>Description:</h3>
+            {{description}}
+        </div>
+    </div>
+</div>

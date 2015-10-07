@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AGMD: jQuery + Bootstrap + Fancybox</title>
+    <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./node_modules/fancybox/dist/css/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="./css/animations.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/product-selection.css">
+</head>
+<body>
+    <header>
+        <section class="jumbotron">
+            <div class="container">
+                <h1>
+                    AGMD: jQuery + Bootstrap + Fancybox
+                    <small>
+                        Formulário de seleção de produtos com load em ajax.
+                    </small>
+                </h1>
+                <p><a id="go-purchases"
+                        class="btn btn-primary btn-lg"
+                        href="#"
+                        role="button">
+                        #partiu compras!
+                    </a>
+                </p>
+            </div>
+            <div class="rotate"></div>
+        </section>
+    </header>
+    <article class="main container">
+        <section class="product-selection">
+            <div class="row">
+                <div class="col-md-4 main-columns selection">
+                    <div class="form-group">
+                        <h2>Área de seleção</h2>
+                        <p class="help-block">
+                            Selecione os produtos que deseja comprar.
+                        </p>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"
+                                value="product[reptiles]"
+                                data-product="reptiles"
+                                data-price="129.90">
+                            Product 01 &mdash; Reptile
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"
+                                value="product[amphibians]"
+                                data-product="amphibians"
+                                data-price="129.90">
+                            Product 02 &mdash; Amphibian
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"
+                                value="product[mammals]"
+                                data-product="mammals"
+                                data-price="129.90">
+                            Product 03 &mdash; Mammal
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"
+                                value="product[oviparous]"
+                                data-product="oviparous"
+                                data-price="129.90">
+                            Product 04 &mdash; Oviparous
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"
+                                value="product[coelenterates]"
+                                data-product="coelenterates"
+                                data-price="129.90">
+                            Product 05 &mdash; Coelenterate
+                        </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"
+                                value="product[echinoderms]"
+                                data-product="echinoderms"
+                                data-price="129.90">
+                            Product 06 &mdash; Echinoderm
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 main-columns selected">
+                    <form id="form-calculate">
+                        <div class="form-group">
+                            <h2>Produtos</h2>
+                            <p class="help-block">
+                                Preview dos produtos selecionados.
+                            </p>
+                            <div class="form-group text-right">
+                                <button type="submit"
+                                    class="btn btn-warning btn-sm select-all">
+                                    Marcar todos
+                                </button>
+                                <button type="submit"
+                                    class="btn btn-danger btn-sm remove-selected"
+                                    disabled>
+                                    Remover
+                                </button>
+                                <button id="calculate"
+                                    type="submit"
+                                    class="btn btn-success btn-sm">
+                                    Calcular
+                                </button>
+                            </div>
+
+                            <div id="calculate-values"class="row text-left"></div>
+                        </div>
+                        <div class="form-group text-right">
+                            <button type="submit"
+                                class="btn btn-warning btn-sm select-all">
+                                Marcar todos
+                            </button>
+                            <button type="submit"
+                                class="btn btn-danger btn-sm remove-selected"
+                                disabled>
+                                Remover
+                            </button>
+                            <button id="calculate"
+                                type="submit"
+                                class="btn btn-success btn-sm">
+                                Calcular
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+
+                <div class="col-md-4 main-columns confirmation">
+                    <div class="form-group">
+                        <h2>Confirmação</h2>
+                        <p class="help-block">
+                            Confirme os dados de sua compra.
+                        </p>
+                        <div id="table-consolidated-data" class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Produto</th>
+                                        <th>Preço</th>
+                                        <th>Qtd.</th>
+                                        <th>Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                                <tfoot></tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+    <footer>
+        <div class="mini-logo"></div>
+    </footer>
+</body>
+<script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./node_modules/fancybox/dist/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="./node_modules/form-serializer/dist/jquery.serialize-object.min.js"></script>
+<script type="text/javascript" src="./bower_components/teamdf/jquery-number/jquery.number.min.js"></script>
+<script type="text/javascript" src="./js/helper/DependencyCheckerHelper.js"></script>
+<script type="text/javascript" src="./js/model/ProductSelectionModel.js"></script>
+<script type="text/javascript" src="./js/model/ProductFancyboxModel.js"></script>
+<script type="text/javascript" src="./js/model/ProductCalculateModel.js"></script>
+<script type="text/javascript" src="./js/model/ProductRemoveSelectionModel.js"></script>
+<script type="text/javascript" src="./js/main.js"></script>
+</html>

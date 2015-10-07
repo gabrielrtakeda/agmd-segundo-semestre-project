@@ -1,2 +1,4 @@
-# agmd-segundo-semestre-project
-AGMD: jQuery + Bootstrap + Fancybox
+# AGMD: jQuery + Bootstrap + Fancybox
+Exercício da disciplia de Ambientes Gráficos e Multimídia
+
+## Github Pages

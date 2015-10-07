@@ -1,0 +1,50 @@
+html {
+    background-image: url('./../images/background.jpg');
+}
+
+body {
+    margin: 8px;
+}
+
+body > header {
+    position: relative;
+}
+
+.rotate {
+    background-image: url('./../images/rotate.png');
+    background-repeat: no-repeat;
+    width: 302px;
+    height: 344px;
+    position: absolute;
+    left: 50%;
+    bottom: -400px;
+    margin-left: -151px;
+    z-index: -1;
+    display: block;
+
+    -webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:spin 3s linear infinite;
+}
+
+article.main section {
+    margin-bottom: 30px;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+footer .mini-logo {
+    background-image: url('./../images/mini-logo.png');
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
