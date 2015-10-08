@@ -15,7 +15,7 @@ function ProductFancyboxModel(object) {
         var self = this;
 
         $.ajax({
-            url: '/templates/partials/product-description-fancybox.html',
+            url: ROOT_PATH+'/templates/partials/product-description-fancybox.html',
             method: 'GET',
             dataType: 'html',
             success: function(template) {
@@ -28,7 +28,7 @@ function ProductFancyboxModel(object) {
     this.getProductsJSON = function(template) {
         var self = this;
 
-        $.getJSON('/raw/product-description.json', function(json) {
+        $.getJSON(ROOT_PATH+'/raw/product-description.json', function(json) {
             self.data['description'] = json[self.data['product']].description;
             $.fancybox(
                 self.replaceVars(template, self.data)
