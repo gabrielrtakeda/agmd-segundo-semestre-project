@@ -1,3 +1,1 @@
-window.ROOT_PATH = /github/g.test(window.location.href)
-    ? '/agmd-segundo-semestre-project'
-    : '';
+window.ROOT_PATH = '/agmd-segundo-semestre-project';
