@@ -29,7 +29,7 @@ function ProductSelectionModel() {
 
     this.createBlock = function() {
         var defaultImageExtension = 'jpg';
-        var imagePath = './images/products/%image.%ext'
+        var imagePath = ROOT_PATH+'/images/products/%image.%ext'
             .replace('%image', this.data['product'])
             .replace('%ext', defaultImageExtension);
 
