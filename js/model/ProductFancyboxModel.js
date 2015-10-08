@@ -30,9 +30,9 @@ function ProductFancyboxModel(object) {
 
         $.getJSON(ROOT_PATH+'/raw/product-description.json', function(json) {
             self.data['description'] = json[self.data['product']].description;
-            $.fancybox(
-                self.replaceVars(template, self.data)
-            );
+            $.fancybox(self.replaceVars(template, self.data), {
+                fitToView: true
+            });
         })
         .error(this.error)
         .fail(this.fail);
